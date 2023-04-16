@@ -21,9 +21,9 @@ const Product = ({product}) => {
     </Link> 
     <AiOutlineRight className='relative right-5 z-10 cursor-pointer opacity-0 group-hover:opacity-100 hover:scale-150 transition duration-150' size={40} />
     <div className='mx-auto'>
-      <BsCircleFill className='absolute items-center top-[520px] right-60 lg:right-44 opacity-0 group-hover:opacity-100 transition duration-300' size={14}/>
-      <BsCircle className='absolute top-[520px] right-56 lg:right-40 opacity-0 group-hover:opacity-100 transition duration-300' size={14}/>
-      <BsCircle className='absolute top-[520px] right-52 lg:right-36 opacity-0 group-hover:opacity-100 transition duration-300' size={14}/>
+      <BsCircleFill className='absolute items-center top-[520px] right-60 lg:right-48 opacity-0 group-hover:opacity-100 transition duration-300' size={14}/>
+      <BsCircle className='absolute top-[520px] right-56 lg:right-44 opacity-0 group-hover:opacity-100 transition duration-300' size={14}/>
+      <BsCircle className='absolute top-[520px] right-52 lg:right-40 opacity-0 group-hover:opacity-100 transition duration-300' size={14}/>
     </div>
   </div>
 </div>
