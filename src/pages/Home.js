@@ -33,7 +33,7 @@ const Home = () => {
   filteredProducts[8].image = 'https://balenciaga.dam.kering.com/m/6ca55d17981d45df/Small-745376T32751000_Z.jpg?v=1';
   filteredProducts[9].image = 'https://balenciaga.dam.kering.com/m/6ccf4deafe7ddaf6/Small-745213TNW111700_Y.jpg?v=1';
 
-  filteredProducts[0].title = 'TRACK 2 SNEAKER';
+  filteredProducts[0].title = 'MENS TRACK SNEAKER IN BLACK';
   filteredProducts[6].title = 'BALENCIAGA PARIS HANDBAG';
   filteredProducts[1].title = 'SHRUNK BOMBER';
   filteredProducts[4].title = 'CHUNKY RUNNER';
@@ -43,6 +43,17 @@ const Home = () => {
   filteredProducts[7].title = 'SKATER T-SHIRT OVERSIZED';
   filteredProducts[8].title = 'BIKER SWEATER';
   filteredProducts[9].title = 'REBEL PANTS';
+
+  filteredProducts[0].description = 'Track sneaker in black mesh and nylon.';
+  filteredProducts[6].description = 'Balenciaga Paris Handbag in black box calfskin with aged-silver hardware is in several looks of the Balenciaga`s Spring 23 Collection, NYC Show.';
+  filteredProducts[1].description = 'Shrunk Bomber in black nylon is from the look 66 of the Balenciaga`s Summer 23 Collection.';
+  filteredProducts[4].description = 'Speed Lace-Up in black knit';
+  filteredProducts[2].description = 'Balenciaga Paris All In Parka in black nylon and medium curly fleece is from the look 17 of the Balenciaga`s Summer 23 Collection.';
+  filteredProducts[5].description = 'Triple S Sneaker in black double foam and mesh.';
+  filteredProducts[3].description = 'Biker Baggy Pants in white soft matte cowskin are from the look 9 of the Balenciaga`s Summer 23 Collection.';
+  filteredProducts[7].description = 'SKATER T-SHIRT OVERSIZED';
+  filteredProducts[8].description = 'Biker Sweater in black cotton rib baked knit is from the look 3 of the Balenciaga`s Summer 23 Collection.';
+  filteredProducts[9].description = 'REBEL PANTS';
   }
 
   const gridColsClass = narrowView ? 'md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 justify-items-stretch' : 'md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 justify-items-stretch';
