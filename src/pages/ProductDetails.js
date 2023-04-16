@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import { CartContext } from '../contexts/CartContext';
 // import product context
 import { ProductContext } from '../contexts/ProductContext';
+import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 
 const ProductDetails = () => {
   // get the product id from the url
@@ -31,7 +32,7 @@ const ProductDetails = () => {
       <div className='flex flex-col lg:flex-row items-center'>
    {/* image */}
       <div className='flex flex-1 justify-center items-center mb-8 lg:mb-0'>
-        <img className='max-w-[200px] lg:max-w-sm' src={image} alt={title} />
+        <img className='max-w-[600px] lg:max-w-sm scale-125 cursor-pointer hover:scale-150 transition duration-300' src={image} alt={title} />
         </div>
       {/* text */}
       <div className='flex-1 text-center lg:text-left'>

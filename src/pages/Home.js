@@ -45,21 +45,21 @@ const Home = () => {
   filteredProducts[9].title = 'REBEL PANTS';
   }
 
-  const gridColsClass = narrowView ? 'md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2' : 'md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3';
+  const gridColsClass = narrowView ? 'md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 justify-items-stretch' : 'md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 justify-items-stretch';
 
   
   return(  
   <div>
     <Hero />
-    <div className='flex items-center'>
+    <div className='flex items-stretch'>
   <button onClick={() => setNarrowView(!narrowView)} className='bg-gray-200 py-2 px-4 my-4 ml-4 flex flex-row gap-2'>
     VIEWS{narrowView ? <CgViewSplit size={20} /> : <HiOutlineViewBoards size={20} />} 
   </button>
   <div className='text-right text-[26px] ml-auto mr-10 font-semibold'>10 Results</div>
 </div>
-    <section className=''>
-      <div className="container mx-auto flex flex-wrap justify-center">
-        <div className={`container mx-auto grid ${gridColsClass}`}>
+    <section className='w-max mx-auto justify-items-stretch'>
+      <div className="container w-max mx-auto bg-white flex flex-wrap justify-items-stretch">
+        <div className={`container mx-auto grid ${gridColsClass} justify-items-stretch`}>
           {filteredProducts.map(product => {
             return <Product product={product} key={product.id} />
 

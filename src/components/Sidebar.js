@@ -27,12 +27,12 @@ const Sidebar = () => {
         <IoMdArrowForward className='text-2xl' />
       </div>
     </div>
-    <div className='flex flex-col gap-y-2 h-[520px] lg:h-[640px] overflow-y-auto overflow-x-hidden border-b'>
+    <div className='flex flex-col gap-y-2 h-[520px] lg:h-[380px] overflow-y-auto overflow-x-hidden border-b'>
       {cart.map(item => {
       return <CartItem item={item} key={item.id} />;
     })}
     </div>
-    <div className='flex flex-col gap-y-3 py-4 mt-4'>
+    <div className='flex flex-col gap-y-0 py-0 mt-0'>
       <div className='flex w-full justify-between items-center py-4 px-4'>
       
         {/* total */}
@@ -41,13 +41,13 @@ const Sidebar = () => {
         </div>
         {/* clear cart icon */}
         <div onClick={clearCart} 
-        className='cursor-pointer py-4 bg-red-500 text-white w-12 h-12 flex justify-center items-center
+        className='cursor-pointer py-4 bg-red-500 text-white w-8 h-8 flex justify-center items-center
         text-xl'>
           <FiTrash2 />
         </div>
       </div>
-      <Link to='/' className='bg-gray-200 flex p-4 justify-center items-center text-primary w-full font-medium'>View Cart</Link>
-      <Link to='/' className='bg-primary flex p-4 justify-center items-center text-white w-full font-medium'>Checkout</Link>
+      <Link to='/' className='bg-gray-200 flex p-4 justify-center items-center text-primary w-full font-medium scale-75'>View Cart</Link>
+      <Link to='/' className='bg-primary flex p-4 justify-center items-center text-white w-full font-medium scale-75'>Checkout</Link>
     </div>
     </div>
   )
