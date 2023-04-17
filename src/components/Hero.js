@@ -23,7 +23,7 @@ const Hero = () => {
       <div className='container mx-auto flex justify-around h-full'>
         <div className='flex flex-col justify-center z-20'>
           <AiOutlineLeft
-            className='absolute left-3 text-white hover:scale-150 transition duration-300 cursor-pointer'
+            className='absolute left-10 text-white hover:scale-150 transition duration-300 cursor-pointer'
             size={40}
             onClick={handlePrevClick}
           />

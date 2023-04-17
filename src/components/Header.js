@@ -26,10 +26,10 @@ const Header = () => {
   }, []);
 
   return (
-<header className={`${isActive ? 'bg-white py-4 shadow-md' : 'bg-none py-6'} fixed w-full z-10 transition-all`}>
-  <div className='container mx-auto flex flex-row items-center justify-between h-full'>
+<header className={`${isActive ? 'bg-white py-4 shadow-md' : 'bg-none py-6'} fixed w-full z-30 transition-all`}>
+  <div className='container mx-auto flex flex-row items-center justify-between h-full z-30'>
     {/* Logo */}
-    <div className={`${isActive ? 'visible' : 'invisible'}`}>
+    <div className={`${isActive ? 'visible' : 'invisible'} z-30`}>
       <div className='flex flex-row z-30 items-center'>
         <AiOutlineSearch className='cursor-pointer hover:scale-125 transition duration-300' size={30}/>
         <div className='absolute flex flex-row z-30 text-[12px] ml-12 text-black '>
