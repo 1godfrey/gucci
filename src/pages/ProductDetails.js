@@ -27,7 +27,7 @@ const ProductDetails = () => {
   const { title, price, description, image } = product;
 
   return <section className='pt-32 pb-12 lg:py-32 h-screen flex items-center'>
-    <div className='container mx-auto'>
+    <div className='container mx-auto bg-gray-200 '>
       {/* image & text wrapper */}
       <div className='flex flex-col lg:flex-row items-center'>
    {/* image */}

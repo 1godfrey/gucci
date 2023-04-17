@@ -1,9 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url(//db.onlinewebfonts.com/c/61a0b5a52c6d5c88e6d90cb751b56d6c?family=Granjon);
 
 @layer base {
   body {
     @apply font-primary text-primary;
+    @font-face {font-family: "Granjon"; src: url("//db.onlinewebfonts.com/t/61a0b5a52c6d5c88e6d90cb751b56d6c.eot"); src: url("//db.onlinewebfonts.com/t/61a0b5a52c6d5c88e6d90cb751b56d6c.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/61a0b5a52c6d5c88e6d90cb751b56d6c.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/61a0b5a52c6d5c88e6d90cb751b56d6c.woff") format("woff"), url("//db.onlinewebfonts.com/t/61a0b5a52c6d5c88e6d90cb751b56d6c.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/61a0b5a52c6d5c88e6d90cb751b56d6c.svg#Granjon") format("svg"); }
   }
 }

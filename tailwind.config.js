@@ -2,12 +2,16 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     fontFamily: {
-      primary: 'Poppins',
+      primary: 'Granjon',
     },
     container: {
       padding: {
-        DEFAULT: '30px',
+        DEFAULT: '0',        
+        sm: '0',
+        md: '0',
         lg: '0',
+        xl: '0',
+
       },
     },
     screens: {

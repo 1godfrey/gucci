@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 
 
 const App = () => {
-  return <div className='overflow-hidden'>
+  return <div className='overflow-hidden w-full'>
     <Router>
       <Header />
       <Routes>

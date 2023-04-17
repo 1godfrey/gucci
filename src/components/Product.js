@@ -21,14 +21,14 @@ const Product = ({ product }) => {
     <div className=''>
       <div className='border border-[white] z-5 h-[492px] mb-0 relative overflow-hidden group transition'>
         <div className='w-full h-full flex justify-center'>
-          <div className='w-full mx-auto flex justify-center items-center relative'>
+          <div className='w-full h-full mx-auto flex justify-center items-center relative'>
             {/* <Link to={`/product/${id}`}> */}
               <img className='max-h-[1220px] scale-y-150 z-5 transition duration-300' src={image} alt='' />
             {/* </Link> */}
           </div>
         </div>
 
-        <div className='absolute top-2 right-2 p-2 flex flex-col items-center justify-center gap-y-2 transition-all duration-300'>
+        <div className='absolute top-2 xl:top-2 right-2 p-2 flex flex-col items-center justify-center gap-y-2 transition-all duration-300'>
 
         
         <button onClick={() => {addToCart(product, id); handleLikeToggle()}}>

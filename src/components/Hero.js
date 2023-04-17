@@ -36,11 +36,11 @@ const Hero = () => {
           </h1>
           </div>
         </div>
-        <div className='hidden lg:block w-full h-full scale-y-125 z-0'>
+        <div className='w-full scale-y-125 z-0'>
           <img className='bg-cover z-0 transition duration-1000' src={images[currentImage]} alt='' />
         </div>
         <AiOutlineRight
-          className='absolute right-10 top-96 text-white hover:scale-150 transition duration-300 cursor-pointer'
+          className='absolute right-10 top-96 z-30 text-white hover:scale-150 transition duration-300 cursor-pointer'
           size={40}
           onClick={handleNextClick}
         />

@@ -34,25 +34,27 @@ const Home = () => {
   filteredProducts[5].image = 'https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1675103502/739484_AABY0_2801_001_100_0008_Light-Jumbo-GG-continental-wallet.jpg';
   filteredProducts[9].image = 'https://media.gucci.com/style/HEXD6D7D2_Center_0_0_800x800/1677176151/740655_XKC6M_4492_001_100_0000_Light-Knit-cotton-wool-sweater-with-patch.jpg';
 
-  filteredProducts[0].title = 'MENS TRACK SNEAKER IN BLACK';
-  filteredProducts[6].title = 'BALENCIAGA PARIS HANDBAG';
-  filteredProducts[1].title = 'SHRUNK BOMBER';
-  filteredProducts[4].title = 'CHUNKY RUNNER';
-  filteredProducts[2].title = 'BALENCIAGA PARIS ALL IN PARKA';
-  filteredProducts[5].title = 'TRIPLE S SNEAKER';
-  filteredProducts[3].title = 'BIKER BAGGY PANTS';
-  filteredProducts[7].title = 'SKATER T-SHIRT OVERSIZED';
-  filteredProducts[8].title = 'BIKER SWEATER';
+  filteredProducts[0].title = 'LOAFERS';
+  filteredProducts[6].title = 'DRESS';
+  filteredProducts[1].title = 'SHORTS';
+  filteredProducts[4].title = 'LOGO POLO SHIRT';
+  filteredProducts[2].title = 'CARDIGAN';
+  filteredProducts[5].title = 'LOGO WALLET';
+  filteredProducts[3].title = 'LOGO BELT';
+  filteredProducts[7].title = 'TWEED SHIRT';
+  filteredProducts[8].title = 'PURSE';
+  filteredProducts[9].title = 'NAVY CARDIGAN';
 
-  filteredProducts[0].description = 'Track sneaker in black mesh and nylon.';
-  filteredProducts[6].description = 'Balenciaga Paris Handbag in black box calfskin with aged-silver hardware is in several looks of the Balenciaga`s Spring 23 Collection, NYC Show.';
-  filteredProducts[1].description = 'Shrunk Bomber in black nylon is from the look 66 of the Balenciaga`s Summer 23 Collection.';
-  filteredProducts[4].description = 'Speed Lace-Up in black knit';
-  filteredProducts[2].description = 'Balenciaga Paris All In Parka in black nylon and medium curly fleece is from the look 17 of the Balenciaga`s Summer 23 Collection.';
-  filteredProducts[5].description = 'Triple S Sneaker in black double foam and mesh.';
-  filteredProducts[3].description = 'Biker Baggy Pants in white soft matte cowskin are from the look 9 of the Balenciaga`s Summer 23 Collection.';
-  filteredProducts[7].description = 'SKATER T-SHIRT OVERSIZED';
-  filteredProducts[8].description = 'Biker Sweater in black cotton rib baked knit is from the look 3 of the Balenciaga`s Summer 23 Collection.';
+  filteredProducts[0].description = 'Loafers in black leather with interlocking G detail.';
+  filteredProducts[6].description = 'White Dress.';
+  filteredProducts[1].description = 'Navy Shorts.';
+  filteredProducts[4].description = 'Logo Polo Shirt';
+  filteredProducts[2].description = 'Cardigan.';
+  filteredProducts[5].description = 'Logo.';
+  filteredProducts[3].description = 'Logo Belt.';
+  filteredProducts[7].description = 'Tweed Shirt.';
+  filteredProducts[8].description = 'Logo Purse.';
+  filteredProducts[9].description = 'NAVY CARDIGAN';
   }
 
   const gridColsClass = narrowView ? 'md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 justify-items-stretch' : 'md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 justify-items-stretch';
@@ -61,13 +63,17 @@ const Home = () => {
   return(  
   <div>
     <Hero />
-    <div className='flex items-stretch'>
+    <div className=''>
   {/* <button onClick={() => setNarrowView(!narrowView)} className='bg-gray-200 py-2 px-4 my-4 ml-4 flex flex-row gap-2'>
     VIEWS{narrowView ? <CgViewSplit size={20} /> : <HiOutlineViewBoards size={20} />} 
   </button> */}
-  <div className='text-right text-[26px] ml-auto mr-10 font-semibold'>10 Results</div>
+  <div className='text-right text-[26px] relative mr-28'>
+    {/* <button className='bg-gray-200 cursor-pointer py-2 px-4'>
+    Filter
+    </button> */}
+    </div>
 </div>
-    <section className='w-max mx-auto justify-items-stretch'>
+    <section className='w-full mx-auto justify-items-stretch'>
       <div className="container w-max mx-auto bg-white flex flex-wrap justify-items-stretch">
         <div className={`container mx-auto grid ${gridColsClass} justify-items-stretch`}>
           {filteredProducts.map(product => {
