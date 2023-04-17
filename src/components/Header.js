@@ -32,14 +32,14 @@ const Header = () => {
     <div className={`${isActive ? 'visible' : 'invisible'}`}>
       <div className='flex flex-row z-30 items-center'>
         <AiOutlineSearch className='cursor-pointer hover:scale-125 transition duration-300' size={30}/>
-        <div className='absolute flex flex-row z-30 ml-12 text-black '>
+        <div className='absolute flex flex-row z-30 text-[12px] ml-12 text-black '>
           <div className='cursor-pointer'>GIFTS</div>
           <div className='ml-4 cursor-pointer flex'>WHAT'S NEW</div>
           <div className='ml-4 cursor-pointer'>HANDBAGS</div>
           <div className='ml-4 cursor-pointer'>WOMEN</div>
           <div className='ml-4 cursor-pointer'>MEN</div>
           <div className='ml-4 cursor-pointer'>CHILDREN</div>
-          <div className='ml-80 lg:opacity-0 xl:opacity-100 cursor-pointer'>JEWELRY & WATCHES</div>
+          <div className='ml-96 lg:opacity-0 xl:opacity-100 cursor-pointer'>JEWELRY & WATCHES</div>
           <div className='ml-4 lg:opacity-0 xl:opacity-100 cursor-pointer'>DECOR & LIFESTYLE</div>
           <div className='ml-4 lg:opacity-0 xl:opacity-100 cursor-pointer'>BEAUTY</div>
           <div className='ml-4 lg:opacity-0 xl:opacity-100 font-bold text-green-300 cursor-pointer'>VAULT</div>

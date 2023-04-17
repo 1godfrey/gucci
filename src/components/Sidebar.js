@@ -20,7 +20,7 @@ const Sidebar = () => {
   return( <div className={`${isOpen ? 'right-0' : '-right-full'} w-full bg-white border-black fixed top-0 h-full shadow-2xl 
   md:w-[35vw] xl:max-w-[30vw] transition-all 
   duration-300 z-20 px-0 lg:px-[0px]`}>
-    <div className='flex items-center justify-between py-6 bg-green-500 border-black'>
+    <div className='flex items-center justify-between py-6 bg-gray-200 border-black'>
       <div className='uppercase text-sm font-semibold px-4'>Shopping Bag ({itemAmount})</div>
       {/* icons */}
       <div onClick={handleClose} className='cursor-pointer w-8 h-8 flex justify-center items-center'>
