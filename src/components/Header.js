@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 // import logo
 import Logo from '../img/logo.svg';
 import {AiOutlineSearch} from 'react-icons/ai';
+import gucci_logo from '../img/gucci_logo.png';
 
 const Header = () => {
   // header state
@@ -31,17 +32,19 @@ const Header = () => {
       <div className='container mx-auto flex items-center justify-between h-full'>
         {/* Logo */}
         
-          <div>
+          <div className={`${isActive ? 'visible' : 'invisible'}`}>
           <AiOutlineSearch className='cursor-pointer hover:scale-125 transition duration-300' size={30}/>
             {/* <img className='w-[40px]' src={Logo} alt='' /> */}
           </div>
         <Link to={'/'}>
-        <div className={`${isActive ? 'visible' : 'invisible'} font-semibold text-[30px]`}>BALENCIAGA</div>
+        <div className={`${isActive ? 'visible' : 'invisible'} font-semibold text-[30px]`}>
+          <img src={gucci_logo} alt='' className='text-white'/>
+          </div>
         </Link>
         {/* cart */}
-        <div onClick={() => setIsOpen(!isOpen)} className='cursor-pointer flex relative hover:scale-125 transition duration-300'>
+        <div onClick={() => setIsOpen(!isOpen)} className={`${isActive ? 'visible' : 'invisible'} cursor-pointer flex relative hover:scale-125 transition duration-300`}>
           <BsBag className='text-2xl' />
-          <div className='bg-red-500 absolute -right-2 -bottom-2 text-[12px] w-[18px] h-[18px] text-white rounded-full flex justify-center items-center'>
+          <div className={`${isActive ? 'visible' : 'invisible'} bg-red-500 absolute -right-2 -bottom-2 text-[12px] w-[18px] h-[18px] text-white rounded-full flex justify-center items-center`}>
             {itemAmount}
           </div>
         </div>

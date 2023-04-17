@@ -1,54 +1,54 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BsPlus, BsEyeFill, BsCircleFill, BsCircle } from 'react-icons/bs';
 import { CartContext } from '../contexts/CartContext';
-import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
+import { AiOutlineLeft, AiOutlineRight, AiOutlineHeart, AiFillHeart, AiFillFolder } from 'react-icons/ai';
 import { VscCircleFilled, VscCircleLarge } from 'react-icons/vsc';
 
-const Product = ({product}) => {
+const Product = ({ product }) => {
   const { addToCart } = useContext(CartContext);
-  const {id, image, category, title, price} = product;
+  const { id, image, category, title, price } = product;
+
+    // Add a state to toggle the heart icons
+    const [liked, setLiked] = useState(false);
   
-  
-  return( 
+    // Toggle the state when heart icon is clicked
+    const handleLikeToggle = () => {
+      setLiked(!liked);
+    }
+
+  return (
     <div className=''>
-      <div className='border border-[black] z-5 h-[600px] mb-0 relative overflow-hidden group transition'>
-      <div className='w-full h-full flex justify-center'>
-  <div className='w-full mx-auto flex justify-center items-center relative'>
-    <AiOutlineLeft className='relative left-5 z-10 cursor-pointer opacity-0 group-hover:opacity-100 hover:scale-150 transition duration-150' size={40} />
-    <Link to={`/product/${id}`}>
-      <img className='max-h-[1220px] group-hover:scale-110 z-5 transition duration-300 cursor-pointer' src={image} alt=''  />
-    </Link> 
-    <AiOutlineRight className='relative right-5 z-10 cursor-pointer opacity-0 group-hover:opacity-100 hover:scale-150 transition duration-150' size={40} />
+      <div className='border border-[white] z-5 h-[492px] mb-0 relative overflow-hidden group transition'>
+        <div className='w-full h-full flex justify-center'>
+          <div className='w-full mx-auto flex justify-center items-center relative'>
+            {/* <Link to={`/product/${id}`}> */}
+              <img className='max-h-[1220px] scale-y-150 z-5 transition duration-300' src={image} alt='' />
+            {/* </Link> */}
+          </div>
+        </div>
 
+        <div className='absolute top-2 right-2 p-2 flex flex-col items-center justify-center gap-y-2 transition-all duration-300'>
 
-  </div>
-</div>
-
-        <div className='absolute top-6 -right-11 group-hover:right-5 p-2 flex flex-col items-center justify-center gap-y-2 opacity-0 group-hover:opacity-100 transition-all duration-300'>
-          <button onClick={() => addToCart(product, id)}>
-            <div className='flex justify-center items-center text-white w-12 h-12 bg-black'>
-              <BsPlus className="text-3xl" />
+        
+        <button onClick={() => {addToCart(product, id); handleLikeToggle()}}>
+            <div className='flex justify-center items-center text-black w-12 h-12 relative'>
+            {liked ? (
+                <AiFillHeart size={20} className='absolute text-3xl z-15 opacity-100' />
+              ) : (
+                <AiOutlineHeart size={20} className='absolute text-3xl opacity-100' />
+              )}
             </div>
           </button>
-          <Link to={`/product/${id}`} className='w-12 h-12 bg-white flex justify-center items-center text-primary drop-shadow-xl'>
-            <BsEyeFill />
-          </Link>
- 
-        </div>          <div className='relative -top-16 text-center z-1 opacity-100 group-hover:opacity-0 transition duration-300'>
-        <Link to={`/product/${id}`}>
-          <h2 className='font-semibold mb-1'>{title}</h2>
-        </Link>
-        <div className='font-semibold'>$ {price}</div>
-      </div>     
-         <div className='flex flex-row item-center justify-center'>
-  
-      <BsCircleFill className='relative -top-24 opacity-0 group-hover:opacity-100 transition duration-300' size={14}/>
-      <BsCircle className='relative -top-24 opacity-0 group-hover:opacity-100 transition duration-300' size={14}/>
-      <BsCircle className='relative -top-24 opacity-0 group-hover:opacity-100 transition duration-300' size={14}/>
-      </div>
-      </div>
+        </div>
 
+        <div className='relative -top-16 text-center z-1 opacity-0 group-hover:opacity-100 transition duration-300'>
+          <Link to={`/product/${id}`}>
+            <h2 className='mb-1'>{title}</h2>
+          </Link>
+          <div className=''>$ {price}</div>
+        </div>
+      </div>
     </div>
   );
 };
